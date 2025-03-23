@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JunkExperts | Premium Junk Removal Services UAE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <style>
+        /* Hero Background */
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                        url('https://images.unsplash.com/photo-1581578731548-c64695cc6952') center/cover;
+        }
+
+        /* Navbar Styles */
+        #navbar {
+            background-color: transparent;
+            backdrop-filter: blur(10px);
+        }
+        #navbar.nav-scroll {
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        #navbar .logo-text,
+        #navbar .logo-text span {
+            color: white;
+            transition: color 0.3s ease;
+        }
+        #navbar.nav-scroll .logo-text,
+        #navbar.nav-scroll .logo-text span {
+            color: black;
+        }
+        .nav-link,
+        .nav-link-mobile {
+            color: white;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover,
+        .nav-link-mobile:hover {
+            color: #ff7f50;
+        }
+        #navbar.nav-scroll .nav-link,
+        #navbar.nav-scroll .nav-link-mobile {
+            color: black;
+        }
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #ff7f50;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Mobile Menu Animation */
+        #mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        #mobile-menu.open {
+            max-height: 500px; /* Adjust based on your content height */
+            transition: max-height 0.5s ease-in;
+        }
+        .nav-link-mobile {
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+        #mobile-menu.open .nav-link-mobile {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.2s;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f7fafc;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ff7f50;
+            border-radius: 4px;
+        }
+
+        /* Hover Effects */
+        .hover-effect {
+            transition: all 0.3s ease-in-out;
+        }
+        .hover-effect:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Service Card Hover */
+        .service-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/junk-removal-logo-junk-removal-services-icon-design-template-113e6dbca3b9794444bd7fc5a46e0817_screen.jpg?ts=1683623837" alt="Logo" class="h-12 w-12">
+                <span class="ml-3 text-2xl font-bold logo-text cursor-pointer">Junk<span class="text-orange-500">Experts</span></span>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="nav-link relative group">Home</a>
+                <a href="#services" class="nav-link relative group">Services</a>
+                <a href="#about" class="nav-link relative group">About</a>
+                <a href="#contact" class="bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-600 transition hover:shadow-lg hover-effect">
+                    Book Now
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-toggle" class="md:hidden text-white focus:outline-none" aria-expanded="false">
+                <svg class="w-8 h-8 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden bg-white shadow-lg">
+            <div class="container mx-auto px-6 py-4 space-y-4">
+                <a href="#home" class="block nav-link-mobile">Home</a>
+                <a href="#services" class="block nav-link-mobile">Services</a>
+                <a href="#about" class="block nav-link-mobile">About</a>
+                <a href="#contact" class="block bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-600 transition hover:shadow-lg hover-effect">
+                    Book Now
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center pt-20" id="home">
+        <div class="container mx-auto px-6 text-center text-white" data-aos="fade-up">
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-8 leading-tight">
+                Professional Junk Removal<br>
+                <span class="text-orange-500">Done Right</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-12 max-w-2xl mx-auto">
+                Fast, eco-friendly removal services for homes and businesses across UAE
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-orange-500 text-white px-8 py-4 rounded-full text-lg hover:bg-orange-600 transition hover:shadow-lg hover-effect">
+                    Get Free Estimate
+                </a>
+                <a href="tel:+971559268746" class="border-2 border-white px-8 py-4 rounded-full text-lg text-white hover:bg-white hover:text-gray-900 transition hover:shadow-lg hover-effect">
+                    <i class="fas fa-phone mr-2"></i>+971 55 926 8746
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-20 bg-gray-50" id="services">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-extrabold mb-4">Our Services</h2>
+                <p class="text-gray-600 text-lg">Comprehensive solutions for all your junk removal needs</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="service-card bg-white rounded-2xl p-6 shadow-md hover-effect" data-aos="zoom-in">
+                    <div class="mb-4">
+                        <div class="bg-orange-100 w-max p-4 rounded-full">
+                            <i class="fas fa-couch text-orange-500 text-3xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Furniture Removal</h3>
+                    <p class="text-gray-600 mb-4">Efficient removal and recycling of old furniture items</p>
+                    <ul class="text-gray-500 space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-orange-500 mr-2"></i>
+                            Same-day service available
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-orange-500 mr-2"></i>
+                            Eco-friendly disposal
+                        </li>
+                    </ul>
+                </div>
+                <!-- Repeat for other services -->
+                <div class="service-card bg-white rounded-2xl p-6 shadow-md hover-effect" data-aos="zoom-in">
+                    <div class="mb-4">
+                        <div class="bg-orange-100 w-max p-4 rounded-full">
+                            <i class="fas fa-trash-alt text-orange-500 text-3xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">General Waste Removal</h3>
+                    <p class="text-gray-600 mb-4">Clear out clutter and unwanted items quickly</p>
+                    <ul class="text-gray-500 space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-orange-500 mr-2"></i>
+                            Flexible scheduling
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-orange-500 mr-2"></i>
+                            Affordable pricing
+                        </li>
+                    </ul>
+                </div>
+                <div class="service-card bg-white rounded-2xl p-6 shadow-md hover-effect" data-aos="zoom-in">
+                    <div class="mb-4">
+                        <div class="bg-orange-100 w-max p-4 rounded-full">
+                            <i class="fas fa-recycle text-orange-500 text-3xl"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Eco-Friendly Recycling</h3>
+                    <p class="text-gray-600 mb-4">Sustainable solutions for waste management</p>
+                    <ul class="text-gray-500 space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-orange-500 mr-2"></i>
+                            Environmentally responsible
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-orange-500 mr-2"></i>
+                            Certified partners
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-20 bg-white" id="process">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-extrabold mb-4">How It Works</h2>
+                <p class="text-gray-600 text-lg">Simple three-step process to clear your space</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="text-center p-6" data-aos="fade-up">
+                    <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+                        1
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Schedule Online</h3>
+                    <p class="text-gray-600">Book your appointment through our easy online form</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="text-center p-6" data-aos="fade-up">
+                    <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+                        2
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">We Remove Your Junk</h3>
+                    <p class="text-gray-600">Our team arrives on time to handle everything</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="text-center p-6" data-aos="fade-up">
+                    <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+                        3
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Enjoy Your Clean Space</h3>
+                    <p class="text-gray-600">Relax while we take care of the rest</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-orange-500 text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-extrabold mb-8" data-aos="fade-up">Ready to Clear Your Space?</h2>
+            <div class="max-w-2xl mx-auto mb-8" data-aos="fade-up">
+                <p class="text-xl">Get instant pricing and book your junk removal in under 2 minutes</p>
+            </div>
+            <a href="#contact" class="bg-white text-orange-500 px-8 py-4 rounded-full text-lg hover:bg-gray-100 transition hover:shadow-lg hover-effect" data-aos="zoom-in">
+                Start Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- About Us -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">About Us</h3>
+                    <p class="text-gray-400">JunkExperts is a premium junk removal service provider in UAE, offering efficient and eco-friendly solutions.</p>
+                </div>
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-orange-500 transition">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-orange-500 transition">Services</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-orange-500 transition">About</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-orange-500 transition">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                    <p class="text-gray-400"><i class="fas fa-phone mr-2"></i>+971 55 926 8746</p>
+                    <p class="text-gray-400"><i class="fas fa-envelope mr-2"></i>info@junkexperts.ae</p>
+                </div>
+                <!-- Social Media -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-orange-500 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-orange-500 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-orange-500 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 JunkExperts. All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', function () {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('nav-scroll');
+            } else {
+                nav.classList.remove('nav-scroll');
+            }
+        });
+
+        // Mobile Menu Toggle Effect
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', function () {
+            mobileMenu.classList.toggle('open');
+            menuToggle.classList.toggle('open');
+
+            // Update aria-expanded attribute
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
+
+            // Close menu when clicking outside
+            if (mobileMenu.classList.contains('open')) {
+                document.addEventListener('click', closeMenuOnClickOutside);
+            } else {
+                document.removeEventListener('click', closeMenuOnClickOutside);
+            }
+        });
+
+        function closeMenuOnClickOutside(e) {
+            if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+                mobileMenu.classList.remove('open');
+                menuToggle.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                document.removeEventListener('click', closeMenuOnClickOutside);
+            }
+        }
+
+        // Close menu when clicking links
+        document.querySelectorAll('.nav-link-mobile').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+                menuToggle.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
+</body>
+</html>
